@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .header {
+            height: 4rem;
+            width: 100%;
+            background: rgb(235, 227, 227);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+        }
+
+        .header span {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.1rem;
+            background: url(./img/1-mob_06.png)no-repeat;
+            background-size: contain;
+        }
+
+        .bannerbox {
+            width: 100%;
+            height: 125rem;
+            background-color: #e7d6ac;
+        }
+
+        .left_nav {
+            position: fixed;
+            background: #5d5d5d;
+            top: 4rem;
+            left: -22.5rem;
+            width: 22.5rem;
+            height: 65rem;
+            z-index: 3;
+            overflow: scroll;
+            color: rgb(253, 253, 253);
+        }
+
+        .left_nav h1 {
+            text-align: center;
+            background-color: #909e71;
+            height: 5rem;
+            line-height: 5rem;
+        }
+
+        .left_nav ul {
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+        .left_nav ul li {
+            width: 100%;
+            height: 4rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .dark {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .3);
+            z-index: 2;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li>网站首页</li>
+            <li>关于我们</li>
+            <li>产品展示</li>
+            <li>动态新闻</li>
+            <li>招商加盟</li>
+            <li>精品推荐</li>
+            <li>植物养护</li>
+            <li>联系我们</li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <script>
+        var btn = document.getElementById('btn');
+        var left_nav = document.getElementById('left_nav');
+        var dark = document.getElementById('dark');
+        var a = "22.5rem";
+        var b = "-22.5rem";
+        btn.onclick = function () {
+            left_nav.style.transform = "translateX(" + a + ")";
+            dark.style.display = "block";
+        }
+        dark.onclick = function () {
+            left_nav.style.transform = "translateX(" + b + ")";
+            dark.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
