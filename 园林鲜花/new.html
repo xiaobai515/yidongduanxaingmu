@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <link rel="stylesheet" href="./css/new.css">
+</head>
+<script>
+    function setRem() {
+        var ui_w = 375;
+        // 获取屏幕的宽度
+        var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        // 通过js动态改变html根节点字体大小
+        var html_ = document.getElementsByTagName('html')[0];
+        html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+    }
+    // window.onresize 浏览器被重置大小执行事件
+    window.onresize = setRem;
+</script>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">植物养护</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 内容 -->
+    <div class="about">
+        <p>新闻动态</p>
+        <p>NEWS</p>
+    </div>
+    <div class="bigbox">
+        <div class="top">
+            <div class="left">
+                <div class="left_1">c</div>
+                <div class="left_2">
+                    <P>新闻动态</P>
+                    <p>NEWS</p>
+                </div>
+
+            </div>
+            <div class="right"><span>分类</span></div>
+        </div>
+
+    </div>
+    <div class="bottom">
+        <dl>
+            <dt class="col-lg-5 col-md-5 col-sm-5 col-xs-5"><a href=""><img src="./img/1-1Q0241G211630.jpg"></a></dt>
+            <dd class="col">
+                <h3><a href="">建网站需要什么 你需要知道这些</a></h3>
+                <p>随着互联网时代的来临，人们目前的工作和生活都是离不开网络的...</p>
+
+            </dd>
+        </dl>
+        <dl>
+            <dt class="col-lg-5 col-md-5 col-sm-5 col-xs-5"><a href=""><img src="./img/1-1Q0241G211630.jpg"></a></dt>
+            <dd class="col">
+                <h3><a href="">建网站需要什么 你需要知道这些</a></h3>
+                <p>随着互联网时代的来临，人们目前的工作和生活都是离不开网络...</p>
+
+            </dd>
+        </dl>
+
+    </div>
+    <script src="./js/jquery.js"></script>
+
+    <footer>
+        <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>
