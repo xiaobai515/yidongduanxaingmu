@@ -141,6 +141,20 @@ body {
     box-sizing: border-box;
     margin: 1.4rem 0;
 }
+/* 动画 */
+.newsTxt{
+    animation: my 1s ease .5s 1 both;
+}
+@keyframes my{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .bigbox .top {
     width: 100%;
@@ -230,11 +244,12 @@ body {
 
 .bottom dl dd h3{
     position: relative;
+    padding: 1rem 0;
     border-bottom: 1px solid #626d49;
   
 }
 .bottom dl{
-    padding: 30px 0;
+    padding: 3rem 0;
 border-bottom: 1px dashed #909e71;
 overflow: hidden;
 
@@ -243,16 +258,16 @@ overflow: hidden;
 .bottom dl dd h3::after {
     content: "";
     display: block;
-    width: 6px;
-    height: 6px;
+    width: .6rem;
+    height: .6rem;
     border-radius: 50%;
     background: #909e71;
     position: absolute;
     right: 0;
     bottom: -3px;
 }
-.bottom dl dd h3 p{
-    margin-top: 1rem;
+.bottom dl dd  p{
+    margin-top: .5rem;
     
 }
 .bottom dl dd h3 a{

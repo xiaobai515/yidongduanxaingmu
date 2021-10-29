@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>产品展示</title>
     <link rel="stylesheet" href="">
     <script src=""></script>
     <style>
@@ -18,7 +18,7 @@
     <!-- Load local jQuery. -->
     <script src="./js/jquery.js"></script>
     <!-- Load local lib and tests. -->
-    <script src="../园林鲜花/fly.js"></script>
+    <script src="../园林鲜花/js/fly.js"></script>
     <link rel="stylesheet" href="./css/show1.css">
 
     <script>
@@ -62,7 +62,7 @@
     <div class="bigbox">
         <div class="top">
             <div class="left">
-                <div class="left_1">c</div>
+                <div class="left_1">C</div>
                 <div class="left_2">
                     <P>产品展示</P>
                     <p>PRODUCT</p>
@@ -114,6 +114,30 @@
             <li><img src="./img/flower13.gif" alt="">
                 <p class="button orange addcar">收藏</p>
             </li>
+            <li><img src="./img/fl1.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl2.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl3.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl4.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl5.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl6.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl7.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
+            <li><img src="./img/fl8.gif" alt="">
+                <p class="button orange addcar">收藏</p>
+            </li>
         </ul>
         <button id="changeBtn" type="button">换一批</button>
     </div>
@@ -127,6 +151,10 @@
         </div>
     </div>
     <div id="msg">已成功收藏！</div>
+
+    <footer>
+        <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+    </footer>
 </body>
 
 </html>
@@ -168,7 +196,7 @@
         $(".show_1 li").hide();
         var showCount = 0;
         while (showCount < 4) {
-            var id = Math.floor(Math.random() * 12);
+            var id = Math.floor(Math.random() * 20);
             var curDiv = $(".show_1 li").eq(id);
             if (curDiv.css("display") == "none") {
                 curDiv.slideToggle(900);

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>精品推荐</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+
+    <!-- Load local jQuery. -->
+    <script src="./js/jquery.js"></script>
+    <!-- Load local lib and tests. -->
+    <script src="../园林鲜花/fly.js"></script>
+    <link rel="stylesheet" href="./css/boutiqu.css">
+
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">植物养护</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 内容 -->
+    <div class="about">
+        <p>精品推荐</p>
+        <p>BOUTIQUE</p>
+    </div>
+    <div class="bigbox">
+        <div class="top">
+            <div class="left">
+                <div class="left_1">C</div>
+                <div class="left_2">
+                    <P>精品推荐</P>
+                    <p>BOUTIQUE</p>
+                </div>
+
+            </div>
+            <div class="right"><span>分类</span></div>
+        </div>
+    </div>
+    <div class="bottom">
+        <ul class="show_1" id="ul">
+            <li><img src="./img/flower1.gif" alt="">
+                <p>花朵一</p>
+
+            </li>
+            <li><img src="./img/flower2.gif" alt="">
+                <p>花朵一</p>
+
+            </li>
+            <li><img src="./img/flower3.gif" alt="">
+                <p>花朵一</p>
+
+            </li>
+            <li><img src="./img/flower4.jpg" alt="">
+                <p>花朵一</p>
+
+            </li>
+            <li><img src="./img/flower5.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower6.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower7.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower8.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower9.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower10.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower11.jpg" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/flower13.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl1.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl2.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl3.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl4.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl5.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl6.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl7.gif" alt="">
+                <p>花朵一</p>
+            </li>
+            <li><img src="./img/fl8.gif" alt="">
+                <p>花朵一</p>
+            </li>
+        </ul>
+
+        <div>
+            <button id="changeBtn">更换一批</button>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>
+<script>
+    $(function () {
+        sjShow();
+        $("#changeBtn").click(function () {
+            sjShow();
+        });
+    })
+    function sjShow() {
+        $(".show_1 li").hide();
+        var showCount = 0;
+        while (showCount < 4) {
+            var id = Math.floor(Math.random() * 20);
+            var curDiv = $(".show_1 li").eq(id);
+            if (curDiv.css("display") == "none") {
+                curDiv.slideToggle(900);
+                curDiv.css("display", "block");
+                showCount++;
+            }
+        }
+    }
+</script>
