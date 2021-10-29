@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/touch.min.js"></script>
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        i {
+            font-style: normals;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: "华文彩云";
+            position: relative;
+            background-color: #f3f0e9;
+        }
+
+        .header {
+            height: 4rem;
+            width: 100%;
+            background: rgb(235, 227, 227);
+            left: 0;
+            top: 0;
+
+            position: fixed;
+        }
+
+        .header span {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.1rem;
+            /* background: url(./img/1-mob_06.png)no-repeat; */
+            background: url(./img/3_03.png) no-repeat;
+            background-size: contain;
+        }
+
+        .bannerbox {
+            width: 100%;
+            /* height: 125rem; */
+            background-color: #e7d6ac;
+        }
+
+        .left_nav {
+            position: fixed;
+            background: #5d5d5d;
+            top: 4rem;
+            left: -22.5rem;
+            width: 22.5rem;
+            height: 65rem;
+            z-index: 3;
+            overflow: scroll;
+            color: rgb(253, 253, 253);
+        }
+
+        .left_nav h1 {
+            text-align: center;
+            background-color: #909e71;
+            height: 5rem;
+            line-height: 5rem;
+        }
+
+        .left_nav ul {
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+        .left_nav ul li {
+            width: 100%;
+            height: 4rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .left_nav ul li a {
+            color: #fff;
+        }
+
+        .left_nav ul li a:hover {
+            color: #909e71;
+        }
+
+        .dark {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .3);
+            z-index: 2;
+            display: none;
+        }
+
+        .box1 {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+            width: 100%;
+            height: 20rem;
+            background: url(./img/1_01.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .box1 span:nth-of-type(1) img {
+            margin-left: 15rem;
+            width: 30%;
+            height: 30%;
+        }
+
+        .picList li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-evenly;
+            margin-left: 7rem;
+            margin-top: -1rem;
+            text-align: center;
+            width: 70%;
+            line-height: 2.1rem;
+        }
+
+        .picList li a {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .picList li a i:hover {
+            color: #909e71;
+        }
+
+        .picList li a i {
+            font-style: normal;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .picList li a b {
+            display: block;
+            width: 100%;
+            border-right: 2px solid #a8a46c;
+        }
+
+        .picList li a span {
+            color: black;
+            font-size: 1rem;
+        }
+
+        .picList li a em {
+            color: white;
+            font-size: .8rem;
+        }
+
+        .box1 span:nth-of-type(2) img {
+            margin-left: 18rem;
+            margin-top: 1rem;
+            width: 5%;
+            height: 15%;
+        }
+
+        .box2 {
+            margin-top: 3rem;
+            padding-top: 5rem;
+            width: 100%;
+            height: 20rem;
+            background: url(./img/1_03.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .box2 span:nth-of-type(1) img {
+            margin: -1.5rem 2rem;
+            width: 30%;
+            height: 50%;
+        }
+
+        .box2_about {
+            margin-top: -8rem;
+            margin-left: 14rem;
+        }
+
+        .box2_about i,
+        .box2_about em {
+            margin-top: 1rem;
+            color: #909e71;
+            font-size: 2rem;
+        }
+
+        .box2_about img {
+            margin: 0 .5rem;
+            width: 10%;
+            height: 10%;
+        }
+
+        .box2_about p {
+            color: black;
+            font-size: 1.7rem;
+            font-family: "华文楷体";
+        }
+
+        .box2_about a {
+            font-family: "华文楷体";
+            margin-right: 3rem;
+            margin-top: -1rem;
+            float: right;
+            font-size: 2rem;
+            color: #909e71;
+        }
+
+        .box2_about a:hover {
+            color: #f39800;
+        }
+
+        .box3 {
+            width: 90%;
+            border: 1rem solid #fff;
+            margin: -5rem auto;
+            border-radius: 15px;
+        }
+
+        .box3 img {
+            border-radius: 15px;
+        }
+
+        .box4 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 7rem;
+            width: 100%;
+        }
+
+        .box4 .line {
+
+            margin-left: 8rem;
+            margin-top: 5rem;
+            width: 8rem;
+            display: inline-block;
+            border-top: 1px dashed #a38d79;
+        }
+
+        .box4_4 {
+            margin-left: 18rem;
+            margin-top: -5rem;
+            line-height: 2.5rem;
+        }
+
+        .box4_4 span {
+            color: #94a176;
+            font-size: 2.5rem;
+        }
+
+        .box4_4 h3 {
+            font-family: "华文楷体";
+            color: #a38d79;
+            font-size: 2rem;
+        }
+
+        .box4_4 img {
+            margin-left: 3rem;
+            width: 30%;
+            height: 40%;
+        }
+
+        .box4 .line_e {
+            margin-left: 15rem;
+            margin-top: 0rem;
+            width: 8rem;
+            display: inline-block;
+            border-top: 1px dashed #a38d79;
+        }
+
+        .pic {
+            width: 33.3%;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box5 {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 25rem;
+            width: 100%;
+            height: 36rem;
+            background: url(./img/1_02.jpg)no-repeat center center;
+        }
+
+        .box5 .time {
+            margin-top: 3rem;
+            width: 34%;
+            height: 34%;
+            border: 2px solid #Fff;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+        }
+
+        .box5 img:nth-of-type(1) {
+            position: absolute;
+            top: 3.3rem;
+            left: 14rem;
+            width: 15%;
+            height: 15%;
+        }
+
+        .box5 img:nth-of-type(2) {
+            position: absolute;
+            top: 3.3rem;
+            left: 31rem;
+            width: 15%;
+            height: 15%;
+        }
+
+        .box5 img:nth-of-type(3) {
+            position: absolute;
+            top: 21.3rem;
+            left: 14rem;
+            width: 15%;
+            height: 15%;
+        }
+
+        .box5 img:nth-of-type(4) {
+            position: absolute;
+            top: 21.3rem;
+            left: 31rem;
+            width: 15%;
+            height: 15%;
+        }
+
+        .box5 h3,
+        .box5 span {
+            font-size: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer {
+            width: 100%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            font-family: "华文楷体";
+            background-color: #909e71;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">植物养护</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 头部导航 -->
+    <div class="box1">
+        <span><img src="./img/logo.png" alt=""></span>
+        <ul class="picList">
+            <li>
+                <a href="#">
+                    <i>A</i>
+                    <b></b>
+                    <span>网站首页</span>
+                    <em>HOME</em>
+                </a>
+                <a href="#"><i>B</i><b></b><span>关于我们</span><em>ABOUT US</em></a>
+                <a href="#"><i>C</i><b></b><span>产品展示</span><em>PRODUCT</em></a>
+                <a href="#"><i>D</i><b></b><span>新闻动态</span><em>NEWS</em></a>
+                <a href="#"><i>E</i><b></b><span>招商加盟</span><em>JOIN</em></a>
+                <a href="#"><i>F</i><b></b><span>精品推荐</span><em>BOUTIQUE</em></a>
+                <a href="#"><i>G</i><b></b><span>植物养护</span><em>PLANT</em></a>
+                <a href="#"><i>H</i><b></b><span>联系我们</span><em>CONTACT</em></a>
+            </li>
+        </ul>
+        <span><img src="./img/nav-on.png" alt=""></span>
+    </div>
+    <!-- more -->
+    <div class="box2">
+        <span><img src="./img/1_07.png" alt=""></span>
+        <div class="box2_about">
+            <i>ABOUT US</i>
+            <img src="./img/1_10.png" alt="">
+            <em>关于我们</em>
+            <p>萌芽时期在公司出现以前，个人独资企业是最典型的企业形式;</p>
+            <a href="#">MORE</a>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="box3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/1-1PR3155S0W6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/1-1PR3160201E4.jpg" alt=""></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev"><img src="./img/bv_03.png" alt=""></div>
+            <div class="swiper-button-next"><img src="./img/bv_05.png" alt=""></div> -->
+
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+
+            autoplay: {
+                delay: 1500,//1秒切换一次
+            },
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+    </script>
+    <!-- 精品推荐 -->
+    <div class="box4">
+        <b class="line"></b>
+        <div class="box4_4">
+            <span>精品推荐</span>
+            <h3>BOUTIQUE</h3>
+            <img src="./img/1-mob_22.png" alt="">
+        </div>
+        <b class="line_e"></b>
+    </div>
+    <!-- 展示 -->
+    <div class="proListBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <ul class="pro-list">
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PZ5093530643.jpg" alt="月季花六"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花六</span> <i></i></a>
+                </div>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PH6163524425.jpg" alt="月季花八"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花八</span> <i></i></a>
+                </div>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PH6163152550.jpg" alt="月季花七"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花七</span> <i></i></a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="proListBox2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <ul class="pro-list pro-listTwo">
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PH616302a21.jpg" alt="月季花五"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花五</span> <i></i></a>
+                </div>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PH6163004H1.jpg" alt="月季花四"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花四</span> <i></i></a>
+                </div>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="pic"><img src="./img/1-1PH6162941463.jpg" alt="月季花三"><span><img
+                            src="./img/1_13.png"></span></a>
+                </div>
+                <div class="title"><i></i>
+                    <span>月季花三</span> <i></i></a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- 动态 -->
+    <div class="box5">
+        <div class="time">
+            <h3>2021</h3>
+            <span>10.28</span>
+        </div>
+        <img src="./img/bv_05.png" alt="">
+        <div class="time">
+            <h3>2021</h3>
+            <span>10.28</span>
+        </div>
+        <img src="./img/bv_05.png" alt="">
+        <div class="time">
+            <h3>2021</h3>
+            <span>10.28</span>
+        </div>
+        <img src="./img/bv_05.png" alt="">
+        <div class="time">
+            <h3>2021</h3>
+            <span>10.28</span>
+        </div>
+        <img src="./img/bv_05.png" alt="">
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <span>Copyright © 某某园林花卉有限公司 版权所有</span>
+    </footer>
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>

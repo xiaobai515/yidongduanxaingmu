@@ -570,7 +570,7 @@ img {
 }
 .pro-list li .title i {
 	display: inline-block;
-	background: url(../images/1_28.png) no-repeat center center;
+	background: url(../img/1_28.png) no-repeat center center;
 	width: 20px;
 	height: 22px;
 	vertical-align: middle;
@@ -643,7 +643,7 @@ img {
 	height: 105px;
 }
 .news {
-	background: url(../images/1_02.jpg) no-repeat center center;
+	background: url(../img/1_02.jpg) no-repeat center center;
 	overflow: hidden;
 	padding: 75px 0;
 }
@@ -2077,8 +2077,9 @@ img {
 	border: 3px solid #fff;
 }
 .pro-list li .pic {
-	width: 4rem;
-	height: 3.5rem;
+	width: 100%;
+	height: 100%;
+	border-radius: 50% / 50%;
 }
 .pro-list li .pic a {
 	width: 4rem;
@@ -2093,12 +2094,13 @@ img {
 	border-bottom: 3px solid #fff;
 }
 .pro-list li .pic span img {
-	width: 40px;
-	height: 43px;
+	width: 100%;
+	height: 100%;
 }
 .pro-listTwo li .pic {
-	width: 3.5rem;
-	height: 3rem;
+	width: 100%;
+	height: 100%;
+	border-radius: 50% / 50%;
 }
 .pro-listTwo li .pic:after {
 	width: 2.5rem;
