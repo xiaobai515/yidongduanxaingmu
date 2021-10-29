@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+    <link rel="stylesheet" href="./css/plant.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">植物养护</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 内容 -->
+    <div class="about">
+        <P>植物养护</P>
+        <p>PLANT</p>
+    </div>
+    <div class="bigbox">
+        <div class="top">
+            <div class="left">
+                <div class="left_1">G</div>
+                <div class="left_2">
+                    <P>植物养护</P>
+                    <p>PLANT</p>
+                </div>
+
+            </div>
+            <div class="right"><span>分类</span></div>
+        </div>
+        <div class="rtCont">
+            <ul class="list-text">
+                <li> <a id="a1" onclick="tishi()" href="#" data-lightbox="example-2" title="园林绿化施工中需注意的五大问题">
+                        <p><b></b>园林绿化施工中需注意的五大问题</p>
+                        <span>2020-12-25</span>
+                    </a><i id="demo" class="demo">
+                        1、原有树木的保存原有树木经确定需要保存，在土建施工以前，应采取措施暂时围起来，以避免由于踏实、焚烧造成损伤。<br>2、表土的采取和复原土壤是花草树木生长的基础，土壤中的土粒最好是构成团粒结构。<br>3、绿化地的整理绿化地的整理不只是简单的清掉垃圾，拔掉杂草，该作业的重要性在于为树木等植物提供良好的生长条件，保证根部能够充分伸长，维持活力，吸收养料和水分。<br>4、非栽植季节树木的栽植树木的最佳移植时期一般是从休眠期到春天萌芽前。<br>5、土建与绿化交叉施工容易出现的问题。
+                    </i></li>
+                <li> <a id="a2" href="#" data-lightbox="example-2" title="冬季家庭花卉的护理">
+                        <p><b></b>冬季家庭花卉的护理</p>
+                        <span>2020-12-25</span>
+                    </a> <i id="demo1" class="demo">
+                        冬季温度较低，不适合大部分花卉植物的生长，为使盆花安全越冬，在初冬时需要陆续搬进室内，入室后采取的养护措施、放置位置都要考虑到各种花卉植物的特性。<br>
+                        1、温度：根据不同花卉适当调节<br>
+                        北方地区，冬季气候寒冷，温度较低，一般南方花卉需要移入室内越冬，并根据不同花卉植物的要求调节适合的温度。<br>
+                        2、施肥：要尽量减少或停止<br>
+                        冬季大多数花卉植物进入休眠期，因而要尽量减少施肥或停止施肥。<br>
+                        3、浇水：切忌直接用自来水浇花<br>
+                        冬季由于气温低，浇花用水要经过器具贮存或晾晒，切忌直接用自来水浇花，以防温差过大，损伤根系。<br>
+                        4、病虫害防治：室内要注意通风<br>
+                        冬季由于室内通风不良，一些花卉常发生白粉病、煤烟病及蚜虫、红蜘蛛等病虫害。
+                    </i></li>
+                <li> <a id="a3" href="#.html" data-lightbox="example-2" title="花卉小常识">
+                        <p><b></b>花卉小常识</p>
+                        <span>2020-12-25</span>
+                    </a><i id="demo2" class="demo">
+                        误区1：浇水未浇透，只浇“半截水”。浇水时一定要浇透，不要只浇“半截水”（即只打湿盆土表面），这样会使花卉的根系供水不足，而造成脱叶甚至枯死。浇水应做到“不干不浇,浇则浇透”，即盆土未干时不要浇水，如果浇水，则要一次浇透。<br>
+                        误区2：不讲究浇水时间，四季如一。浇水的时间是很有讲究的，夏季中午温度比较高，此时切忌浇水，如果浇水，会使得土壤温度突然下降，水分吸收减慢，导致水分供应不足，造成花卉的上部叶子焦枯。一般来说，浇水的时间，冬季宜在下午4时左右，其它季节以上午10时以前为宜。<br>
+                        误区3：晚上叶片上留有水滴。有些人经常在晚上给花卉浇水，或是用湿布拭擦叶片，殊不知晚上叶片上留有水滴，容易造成花卉叶片腐烂，诱发病虫害。因此，要注意浇水时间，以及擦叶片时也要把握好时间，千万要保证晚上叶片上无水，以利于花卉正常生长。<br>
+                    </i> </li>
+            </ul>
+            <ul class="page hidden-xs">
+                <li><a class="pageinfo">共 <strong>1</strong>页<strong>3</strong>条记录</a></li>
+            </ul>
+            <script>
+                var a1 = document.getElementById('a1');
+                var a2 = document.getElementById('a2');
+                var a3 = document.getElementById('a3');
+                var demo1 = document.getElementById('demo');
+                var demo2 = document.getElementById('demo1');
+                var demo3 = document.getElementById('demo2');
+                a1.onclick = function () {
+                    demo1.style.display = "block";
+                }
+                a2.onclick = function () {
+                    demo2.style.display = "block";
+                }
+                a3.onclick = function () {
+                    demo3.style.display = "block";
+                }
+                demo1.onclick = function () {
+                    demo1.style.display = "none";
+                }
+                demo2.onclick = function () {
+                    demo2.style.display = "none";
+                }
+                demo3.onclick = function () {
+                    demo3.style.display = "none";
+                }
+
+
+            </script>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+    </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>

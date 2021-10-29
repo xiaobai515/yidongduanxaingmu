@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">植物养护</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 内容 -->
+    <div class="about">
+        <P>招商加盟</P>
+        <p>JOIN</p>
+    </div>
+    <div class="bigbox">
+        <div class="top">
+            <div class="left">
+                <div class="left_1">E</div>
+                <div class="left_2">
+                    <P>招商加盟</P>
+                    <p>JOIN</p>
+                </div>
+
+            </div>
+            <div class="right"><span>分类</span></div>
+        </div>
+        <div class="bottom">
+            <div class="newsTxt">
+                <p> 企业加盟需要具备的资格条件</p>
+                <p>①具备相关经营资质</p>
+                <p>
+                    申请加盟必须是具备法人资格，申请时需提供《企业法人营业执照》、《税务登记证》、《组织机构代码证》。具备一定的商业背景和经商经验，熟悉当地市场，有产品销售经验的优先。 </p>
+                <p>②当地城市属于可加盟的城市</p>
+                <p>建议您申请加盟之前可先进行可加盟区域查询。</p>
+                <p>&nbsp;</p>
+                <p>加盟区域：</p>
+                <p>③认可我们的企业文化、发展规划等公司理念</p>
+                <p>④完全遵守加盟商规范</p>
+                <p>⑤有一定的资金实力和良好的商业信誉</p>
+                <p>⑥先进的团队分享机制</p>
+                <p>⑦在当地具有良好的销售渠道</p>
+                <p>⑧对投资风险和收益的两面性有正确的认知和充分的心理准备。</p>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>
