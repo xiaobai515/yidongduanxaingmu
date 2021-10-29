@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -24,19 +25,20 @@ html {
 body {
     /* font-family: "华文彩云"; */
     position: relative;
-    background-color: #f3f0e9;
+    background-color: #f4f1ea;
+    width: 100%;
+    height: 100%;
 }
 
 .header {
     height: 4rem;
     width: 100%;
-    background: rgb(235, 227, 227);
+    background-color: #ebe3e3;
     left: 0;
     top: 0;
-    z-index: 999s;
+    z-index: 8888;
     position: fixed;
 }
-
 
 .header span {
     display: inline-block;
@@ -53,7 +55,6 @@ body {
 }
 
 .left_nav {
-    font-family: "华文楷体";
     position: fixed;
     background: #5d5d5d;
     top: 4rem;
@@ -63,9 +64,11 @@ body {
     z-index: 3;
     overflow: scroll;
     color: rgb(253, 253, 253);
+    font-family: "华文楷体";
 }
 
 .left_nav h1 {
+    font-size: 2rem;
     text-align: center;
     background-color: #909e71;
     height: 5rem;
@@ -122,7 +125,6 @@ body {
 
 .about p {
     margin-top: 1rem;
-
 }
 
 .about p:nth-of-type(1) {
@@ -136,7 +138,7 @@ body {
 /* 下面大盒子 bigbox */
 .bigbox {
     width: 100%;
-    height: 6rem;
+    height: 100%;
     background-color: #f3f0e9;
     padding: 0 1rem;
     box-sizing: border-box;
@@ -166,24 +168,21 @@ body {
     color: #6e5d4e;
     text-align: center;
 }
-
-.bigbox .top .left .left_2 {
+.bigbox .top .left .left_2{
     margin-left: 3rem;
     float: left;
     height: 7.2rem;
     width: 13.2rem;
-    line-height: 2.8rem;
-    padding: 1rem 1rem;
-    box-sizing: border-box;
+   line-height: 2.8rem;
+   padding: 1rem 1rem;
+   box-sizing: border-box;
 }
-
-.bigbox .top .left .left_2 p:nth-of-type(1) {
+.bigbox .top .left .left_2 p:nth-of-type(1){
     color: #6e5d4e;
     font-size: 1.8rem;
     font-weight: 600;
 }
-
-.bigbox .top .left .left_2 p:nth-of-type(2) {
+.bigbox .top .left .left_2 p:nth-of-type(2){
     color: #ac9988;
     font-style: 1.4rem;
 }
@@ -194,13 +193,12 @@ body {
     width: 17.4rem;
     height: 7.2rem;
     position: relative;
-
+  
 }
-
-.bigbox .top .right span {
+.bigbox .top .right span{
     position: absolute;
     right: 2rem;
-    top: 1.5rem;
+     top: 1.5rem;
     font-size: 1.8rem;
     display: block;
     width: 9rem;
@@ -209,10 +207,9 @@ body {
     border-radius: .7rem;
     text-align: center;
     line-height: 3rem;
-
+    
 
 }
-
 .bigbox .top .right span::after {
     content: "";
     display: inline-block;
@@ -222,103 +219,45 @@ body {
     margin-left: 5px;
     vertical-align: middle;
 }
-
-/* bottom图片 */
-.u-flyer {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: fixed;
-    z-index: 9999;
-}
-
-.m-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: rgba(243, 240, 233, .0);
-    z-index: 2000;
-    width: 35px;
-    height: 100%;
-    font-size: 12px;
-    color: #fff;
-}
-
-.cart {
-    color: #fff;
-    text-align: center;
-    line-height: 20px;
-    padding: 200px 0 0 0px;
-}
-
-.cart span {
-    display: block;
-    width: 20px;
-    margin: 0 auto;
-    color: #000;
-}
-
-.cart i {
-    width: 35px;
-    height: 35px;
-    display: block;
-    background: url(car.png) no-repeat;
-}
-
-#msg {
-    position: fixed;
-    top: 300px;
-    right: 35px;
-    z-index: 10000;
-    width: 1px;
-    height: 52px;
-    line-height: 52px;
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    background: #360;
-    display: none
-}
-
-.bottom {
-    box-sizing: border-box;
+.rtCont{
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 1rem;
     color: #333;
+    font: 1.6rem "微软雅黑", "Microsoft YaHei";
     background-color: #dfddce;
 }
-
-.bottom .show_1 {
-    width: 100%;
-    height: 30rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.rtCont ul{
     list-style: none;
 }
-
-.bottom .show_1 li {
-    width: 45.9%;
-    height: 11.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.rtCont ul a{
+    text-decoration: none;
+    outline: none;
+    color: #333;
+    padding: 0;
+}
+.demo{
     display: none;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    color: #333;
+    font: 1.6rem "微软雅黑", "Microsoft YaHei";
+    background-color: #dfddce;
 }
-
-.bottom .show_1 li img {
-    width: 100%;
-    height: 10rem;
+.list-text{
+    animation: my 1s ease .5s 1 both;
 }
-
-.bottom .show_1 li p {
-    text-align: center;
+@keyframes my{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-
 /* 底部 */
 footer {
     width: 100%;

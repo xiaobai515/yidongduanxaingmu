@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <script>
+        function setRem() {
+            var ui_w = 375;
+            // 获取屏幕的宽度
+            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            // 通过js动态改变html根节点字体大小
+            var html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+        }
+        // window.onresize 浏览器被重置大小执行事件
+        window.onresize = setRem;
+    </script>
+    <link rel="stylesheet" href="./css/map.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="abount1.html">关于我们</a></li>
+            <li><a href="show1.html">产品展示</a></li>
+            <li><a href="new.html">新闻动态</a></li>
+            <li><a href="join.html">招商加盟</a></li>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="plant.html">植物养护</a></li>
+            <li><a href="map.html">地图导航</a></li>
+        </ul>
+    </div>
+    <div class="dark" id="dark"></div>
+    <!-- 内容 -->
+    <div class="about">
+        <P>地图导航</P>
+        <p>MAP</p>
+    </div>
+    <div class="bigbox">
+        <div class="top">
+            <div class="left">
+                <div class="left_1">G</div>
+                <div class="left_2">
+                    <P>地图导航</P>
+                    <p>MAP</p>
+                </div>
+
+            </div>
+            <div class="right"><span>分类</span></div>
+        </div>
+        <iframe src="map1.html" frameborder="0" width="100%" height="500rem"></iframe>
+    </div>
+    </div>
+    <footer>
+        <p>Copyright © 某某园林花卉有限公司 版权所有</p>
+    </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "22.5rem";
+    var b = "-22.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>

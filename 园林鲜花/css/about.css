@@ -25,20 +25,19 @@ html {
 body {
     /* font-family: "华文彩云"; */
     position: relative;
-    background-color: #f4f1ea;
-    width: 100%;
-    height: 100%;
+    background-color: #f3f0e9;
 }
 
 .header {
     height: 4rem;
     width: 100%;
-    background-color: rgb(138, 130, 130);
+    background: rgb(235, 227, 227);
     left: 0;
     top: 0;
-    z-index: 8888;
+    z-index: 999s;
     position: fixed;
 }
+
 
 .header span {
     display: inline-block;
@@ -64,7 +63,7 @@ body {
     z-index: 3;
     overflow: scroll;
     color: rgb(253, 253, 253);
-    font-family: "华文彩云";
+    font-family: "华文楷体";
 }
 
 .left_nav h1 {
@@ -241,7 +240,19 @@ body {
     font: 1.6rem "微软雅黑", "Microsoft YaHei";
     background-color: #dfddce;
 }
-
+.newsTxt{
+    animation: new 1s ease .5s 1 both;
+}
+@keyframes new{
+    0%{
+        opacity: 0;
+        transform: translateZ(20rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* 底部 */
 footer {
     width: 100%;
