@@ -54,12 +54,14 @@
         }
 
         .header {
+            display: flex;
+            justify-content: space-between;
             height: 4rem;
             width: 100%;
             background: rgb(235, 227, 227);
             left: 0;
             top: 0;
-            z-index: 999s;
+            z-index: 999;
             position: fixed;
         }
 
@@ -71,6 +73,25 @@
             height: 2.1rem;
             /* background: url(./img/1-mob_06.png)no-repeat; */
             background: url(./img/3_03.png) no-repeat;
+            background-size: contain;
+        }
+
+        /* .denglu {
+            height: 4rem;
+            width: 100%;
+            background: rgb(235, 227, 227);
+            left: 0;
+            top: 0;
+            z-index: 999;
+            position: fixed;
+        } */
+
+        .header a {
+            font-family: "华文楷体";
+            font-size: 1.8rem;
+            line-height: 4rem;
+            width: 5rem;
+            height: 5rem;
             background-size: contain;
         }
 
@@ -421,8 +442,9 @@
 
 <body>
     <!-- 头部 -->
-    <div class="header"><span id="btn"></span></div>
+    <div class="header"><span id="btn"></span><a href="enter.html">登录</a></div>
     <div class="bannerbox"></div>
+    <!-- <div class="denglu"><a href="enter.html">登录</a></div> -->
     <!-- 侧导航 -->
     <div class="left_nav" id="left_nav">
         <h1>网站导航</h1>
@@ -437,6 +459,7 @@
             <li><a href="map.html">地图导航</a></li>
         </ul>
     </div>
+
     <div class="dark" id="dark"></div>
     <!-- 头部导航 -->
     <div class="box1">

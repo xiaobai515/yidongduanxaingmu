@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画特效注册登录html页面静态源码模板 - 代码库</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/dmaku.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            position: relative;
+            background-color: #f3f0e9;
+            width: 100%;
+            height: 100%;
+        }
+
+        .materialContainer {
+            position: absolute;
+            top: 90rem;
+            left: 0;
+            margin-left: 50rem;
+            max-width: 80%;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 12rem;
+            width: 100%;
+            background: rgb(235, 227, 227);
+            left: 0;
+            top: 0;
+            z-index: 999;
+            position: fixed;
+        }
+
+        .header span {
+            margin-left: 1rem;
+            margin-top: .5rem;
+            display: inline-block;
+            width: 10.5rem;
+            height: 10.1rem;
+            /* background: url(./img/1-mob_06.png)no-repeat; */
+            background: url(./img/3_03.png) no-repeat;
+            background-size: contain;
+        }
+
+        /* .denglu {
+            height: 4rem;
+            width: 100%;
+            background: rgb(235, 227, 227);
+            left: 0;
+            top: 0;
+            z-index: 999;
+            position: fixed;
+        } */
+
+        .header a {
+            font-family: "华文楷体";
+            font-size: 1.8rem;
+            line-height: 4rem;
+            width: 5rem;
+            height: 5rem;
+            background-size: contain;
+        }
+
+        .bannerbox {
+            width: 100%;
+            /* height: 125rem; */
+            background-color: #e7d6ac;
+        }
+
+        .left_nav {
+            font-family: "华文楷体";
+            position: fixed;
+            background: #5d5d5d;
+            top: 12rem;
+            left: -92.5rem;
+            width: 92.5rem;
+            height: 112rem;
+            z-index: 3;
+            overflow: scroll;
+            color: rgb(253, 253, 253);
+        }
+
+        .left_nav h1 {
+            font-size: 6em;
+            text-align: center;
+            background-color: #909e71;
+            height: 12rem;
+            line-height: 12rem;
+        }
+
+        .left_nav ul {
+            width: 100%;
+            margin-top: 5rem;
+        }
+
+        .left_nav ul li {
+            width: 100%;
+            height: 9rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 4.8rem;
+        }
+
+        .left_nav ul li a {
+            color: #fff;
+        }
+
+        .left_nav ul li a:hover {
+            color: #909e71;
+        }
+
+        .dark {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .3);
+            z-index: 2;
+            display: none;
+        }
+
+        .box1 {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+            width: 100%;
+            height: 55rem;
+            background: url(./img/1_01.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        .box1 span:nth-of-type(1) img {
+            margin-left: 40rem;
+            margin-top: 5rem;
+            width: 30%;
+            height: 30%;
+        }
+
+        .picList {
+            animation: yidong 1s ease 0.5s 1 both;
+        }
+
+        @keyframes yidong {
+            0% {
+                opacity: 0;
+                transform: translateZ(10rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .picList li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-evenly;
+            margin-left: 18rem;
+            margin-top: -1rem;
+            text-align: center;
+            width: 70%;
+            line-height: 4.5rem;
+        }
+
+        .picList li a {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .picList li a i:hover {
+            color: #909e71;
+        }
+
+        .picList li a i {
+            font-style: normal;
+            font-size: 6rem;
+            color: white;
+        }
+
+        .picList li a b {
+            display: block;
+            width: 100%;
+            border-right: 2px solid #a8a46c;
+        }
+
+        .picList li a span {
+            color: black;
+            font-size: 3rem;
+        }
+
+        .picList li a em {
+            color: white;
+            font-size: 2.8rem;
+        }
+
+        .box1 span:nth-of-type(2) img {
+            margin-left: 18rem;
+            margin-top: 1rem;
+            width: 5%;
+            height: 15%;
+        }
+
+        footer {
+            position: absolute;
+            top: 117rem;
+            width: 100%;
+            height: 14rem;
+            line-height: 14rem;
+            font-size: 4rem;
+            text-align: center;
+            font-family: "华文楷体";
+            background-color: #909e71;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"><span id="btn"></span></div>
+    <div class="bannerbox"></div>
+    <!-- <div class="denglu"><a href="enter.html">登录</a></div> -->
+    <!-- 侧导航 -->
+    <div class="left_nav" id="left_nav">
+        <h1>网站导航</h1>
+        <ul>
+            <li><a href="index.html">网站首页</a></li>
+            <li><a href="abount.html">关于我们</a></li>
+            <li><a href="show.html">产品展示</a></li>
+            <li><a href="new.html">新闻动态</a></li>
+            <li><a href="join.html">招商加盟</a></li>
+            <li><a href="boutiqu.html">精品推荐</a></li>
+            <li><a href="plant.html">植物养护</a></li>
+            <li><a href="map.html">地图导航</a></li>
+        </ul>
+    </div>
+
+    <div class="dark" id="dark"></div>
+    <!-- 头部导航 -->
+    <div class="box1">
+        <span><img src="./img/logo.png" alt=""></span>
+        <ul class="picList">
+            <li>
+                <a href="index.html"><i>A</i><b></b><span>网站首页</span><em>HOME</em></a>
+                <a href="abount.html"><i>B</i><b></b><span>关于我们</span><em>ABOUT US</em></a>
+                <a href="show.html"><i>C</i><b></b><span>产品展示</span><em>PRODUCT</em></a>
+                <a href="new.html"><i>D</i><b></b><span>新闻动态</span><em>NEWS</em></a>
+                <a href="join.html"><i>E</i><b></b><span>招商加盟</span><em>JOIN</em></a>
+                <a href="boutiqu.html"><i>F</i><b></b><span>精品推荐</span><em>BOUTIQUE</em></a>
+                <a href="plant.html"><i>G</i><b></b><span>植物养护</span><em>PLANT</em></a>
+                <a href="map.html"><i>H</i><b></b><span>地图导航</span><em>MAP</em></a>
+            </li>
+        </ul>
+        <!-- <span><img src="./img/nav-on.png" alt=""></span> -->
+    </div>
+    <div class="materialContainer">
+        <div class="box">
+            <div class="title">登录</div>
+            <div class="input">
+                <label for="name">用户名</label>
+                <input type="text" name="name" id="name">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="pass">密码</label>
+                <input type="password" name="pass" id="pass">
+                <span class="spin"></span>
+            </div>
+            <div class="button login">
+                <button>
+                    <span>登录</span>
+                    <i class="fa fa-check"></i>
+                </button>
+            </div>
+            <a href="javascript:" class="pass-forgot">忘记密码？</a>
+        </div>
+
+        <div class="overbox">
+            <div class="material-button alt-2">
+                <span class="shape"></span>
+            </div>
+            <div class="title">注册</div>
+            <div class="input">
+                <label for="regname">用户名</label>
+                <input type="text" name="regname" id="regname">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="regpass">密码</label>
+                <input type="password" name="regpass" id="regpass">
+                <span class="spin"></span>
+            </div>
+            <div class="input">
+                <label for="reregpass">确认密码</label>
+                <input type="password" name="reregpass" id="reregpass">
+                <span class="spin"></span>
+            </div>
+            <div class="button">
+                <button>
+                    <span>注册</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/jquery.min.js.下载"></script>
+    <script src="./js/dmaku.js.下载"></script>
+    <!-- 底部 -->
+    <footer>
+        <span>Copyright © 某某园林花卉有限公司 版权所有</span>
+    </footer>
+</body>
+
+</html>
+<script>
+    var btn = document.getElementById('btn');
+    var left_nav = document.getElementById('left_nav');
+    var dark = document.getElementById('dark');
+    var a = "60.5rem";
+    var b = "-62.5rem";
+    btn.onclick = function () {
+        left_nav.style.transform = "translateX(" + a + ")";
+        dark.style.display = "block";
+    }
+    dark.onclick = function () {
+        left_nav.style.transform = "translateX(" + b + ")";
+        dark.style.display = "none";
+    }
+</script>
