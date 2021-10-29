@@ -79,6 +79,7 @@
         }
 
         .left_nav {
+            font-family: "华文楷体";
             position: fixed;
             background: #5d5d5d;
             top: 4rem;
@@ -144,6 +145,22 @@
             height: 30%;
         }
 
+        .picList {
+            animation: yidong 1s ease 0.5s 1 both;
+        }
+
+        @keyframes yidong {
+            0% {
+                opacity: 0;
+                transform: translateZ(10rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .picList li {
             display: flex;
             flex-wrap: wrap;
@@ -203,6 +220,19 @@
             height: 20rem;
             background: url(./img/1_03.png) no-repeat center center;
             background-size: cover;
+            animation: fadeinup 1s ease 0.5s 1 both;
+        }
+
+        @keyframes fadeinup {
+            0% {
+                opacity: 0;
+                transform: translateX(10rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .box2 span:nth-of-type(1) img {
