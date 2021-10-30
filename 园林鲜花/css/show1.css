@@ -33,7 +33,7 @@ body {
     background: rgb(235, 227, 227);
     left: 0;
     top: 0;
-    z-index: 999s;
+    z-index: 999;
     position: fixed;
 }
 
@@ -244,11 +244,11 @@ body {
     width: 35px;
     height: 100%;
     font-size: 12px;
-    color: #fff;
+   
 }
 
 .cart {
-    color: #fff;
+   
     text-align: center;
     line-height: 20px;
     padding: 200px 0 0 0px;
@@ -256,9 +256,13 @@ body {
 
 .cart span {
     display: block;
-    width: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 2.8rem;
     margin: 0 auto;
-    color: #000;
+    color: #666666;
+   
+   
 }
 
 .cart i {
@@ -279,7 +283,7 @@ body {
     font-size: 20px;
     text-align: center;
     color: #fff;
-    background: #360;
+    background: #909e71;
     display: none
 }
 
@@ -290,11 +294,12 @@ body {
     border-radius: 1rem;
     color: #333;
     background-color: #dfddce;
+   
 }
 
 .bottom .show_1 {
     width: 100%;
-    height: 30rem;
+    height: 32rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -316,10 +321,21 @@ body {
     height: 10rem;
 }
 
-.bottom .show_1 li p {
-    text-align: center;
-}
 
+.bottom .show_1 li p:nth-of-type(1){
+    font-style: 2.4rem;
+    margin-bottom: .5rem;
+    color: rgb(27, 26, 26);
+    text-align: center;
+    /* font-family: "行体"; */
+}
+.bottom .show_1 li p:nth-of-type(2){
+    text-align:left;
+    font-size: 1.2rem;
+}
+.bottom .huanyipi{
+    font-size: 1.6rem;
+}
 
 /* 底部 */
 footer {

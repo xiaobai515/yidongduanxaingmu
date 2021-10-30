@@ -69,73 +69,73 @@
     <div class="bottom">
         <ul class="show_1" id="ul">
             <li><img src="./img/flower1.gif" alt="">
-                <p>花朵一</p>
+                <p>兰草彼岸</p>
 
             </li>
             <li><img src="./img/flower2.gif" alt="">
-                <p>花朵一</p>
+                <p>嘉德利亚兰</p>
 
             </li>
             <li><img src="./img/flower3.gif" alt="">
-                <p>花朵一</p>
+                <p>醉仙灵芙</p>
 
             </li>
             <li><img src="./img/flower4.jpg" alt="">
-                <p>花朵一</p>
+                <p>蔷露薇光</p>
 
             </li>
             <li><img src="./img/flower5.jpg" alt="">
-                <p>花朵一</p>
+                <p>晚林香玉</p>
             </li>
             <li><img src="./img/flower6.jpg" alt="">
-                <p>花朵一</p>
+                <p>蓝蝶鸢尾</p>
             </li>
             <li><img src="./img/flower7.jpg" alt="">
-                <p>花朵一</p>
+                <p>漫樱千里</p>
             </li>
             <li><img src="./img/flower8.jpg" alt="">
-                <p>花朵一</p>
+                <p>菡萏沉香</p>
             </li>
             <li><img src="./img/flower9.jpg" alt="">
-                <p>花朵一</p>
+                <p>寒鸦春雪</p>
             </li>
             <li><img src="./img/flower10.jpg" alt="">
-                <p>花朵一</p>
+                <p>云听海棠</p>
             </li>
             <li><img src="./img/flower11.jpg" alt="">
-                <p>花朵一</p>
+                <p>恬莹风兰</p>
             </li>
             <li><img src="./img/flower13.gif" alt="">
-                <p>花朵一</p>
+                <p>薰伊凝思</p>
             </li>
             <li><img src="./img/fl1.gif" alt="">
-                <p>花朵一</p>
+                <p>月夜葵风</p>
             </li>
             <li><img src="./img/fl2.gif" alt="">
-                <p>花朵一</p>
+                <p>紫藤思凌</p>
             </li>
             <li><img src="./img/fl3.gif" alt="">
-                <p>花朵一</p>
+                <p>盈樱恋恋</p>
             </li>
             <li><img src="./img/fl4.gif" alt="">
-                <p>花朵一</p>
+                <p>静莲无声</p>
             </li>
             <li><img src="./img/fl5.gif" alt="">
-                <p>花朵一</p>
+                <p>兰草彼岸</p>
             </li>
             <li><img src="./img/fl6.gif" alt="">
-                <p>花朵一</p>
+                <p>影雅罗兰</p>
             </li>
             <li><img src="./img/fl7.gif" alt="">
-                <p>花朵一</p>
+                <p>紫苑</p>
             </li>
             <li><img src="./img/fl8.gif" alt="">
-                <p>花朵一</p>
+                <p>玫菲艳浓</p>
             </li>
         </ul>
 
         <div>
-            <button id="changeBtn">更换一批</button>
+            <button id="changeBtn">换一批</button>
         </div>
     </div>
     <footer>
@@ -173,8 +173,8 @@
             var id = Math.floor(Math.random() * 20);
             var curDiv = $(".show_1 li").eq(id);
             if (curDiv.css("display") == "none") {
-                curDiv.slideToggle(900);
-                curDiv.css("display", "block");
+                curDiv.stop().slideToggle(900);
+                // curDiv.css("display", "block");
                 showCount++;
             }
         }

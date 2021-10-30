@@ -1,0 +1,86 @@
+{
+  "id": "2903004",
+  "name": "花店",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "77108",
+      "name": "换一批",
+      "font_class": "huanyipi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1383076",
+      "name": "换一批",
+      "font_class": "huanyipi1",
+      "unicode": "e822",
+      "unicode_decimal": 59426
+    },
+    {
+      "icon_id": "13038500",
+      "name": "换一批",
+      "font_class": "huanyipi2",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "1125606",
+      "name": "添加",
+      "font_class": "tianjia1",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "10158977",
+      "name": "添加",
+      "font_class": "tianjia2",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "12978147",
+      "name": "添加",
+      "font_class": "tianjia3",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "1071106",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "23081516",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "19463540",
+      "name": "花 花篮 鲜花 玫瑰花",
+      "font_class": "huahualanxianhuameiguihua",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "24081989",
+      "name": "审批消息",
+      "font_class": "shenpixiaoxi",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "4242973",
+      "name": "收藏夹空",
+      "font_class": "gerenzhongxinqietu-",
+      "unicode": "e6b5",
+      "unicode_decimal": 59061
+    }
+  ]
+}
